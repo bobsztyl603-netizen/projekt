@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup 2026 - Projekt</title>
+<style>
+  body { margin: 0; padding: 0; background: #070913; color: #fff; font-family: sans-serif; text-align: center; }
+  .autor-box { background: linear-gradient(45deg, #ff007f, #7f00ff); padding: 15px; margin: 20px auto; width: 85%; border-radius: 10px; box-shadow: 0 0 15px #ff007f; font-weight: bold; font-size: 18px; }
+  h1 { color: #00f0ff; text-shadow: 0 0 10px #00f0ff; margin: 20px 0; font-size: 26px; }
+  .sekcja { background: #111424; border: 2px solid #00f0ff; border-radius: 12px; margin: 15px auto; padding: 15px; width: 85%; }
+  h3 { margin: 0 0 10px 0; color: #00f0ff; }
+  input { width: 80%; padding: 8px; margin: 5px 0; background: #1b1f38; border: 1px solid #00f0ff; color: #fff; border-radius: 5px; text-align: center; }
+  button { background: #00f0ff; color: #000; border: none; padding: 10px 20px; font-weight: bold; border-radius: 5px; margin-top: 5px; width: 85%; }
+  #wynik { font-size: 20px; color: #ff007f; font-weight: bold; margin-top: 10px; }
+  ul { text-align: left; margin: 0; padding-left: 20px; }
+  li { margin: 5px 0; }
+</style>
+</head>
+<body>
+
+  <h1>⚽ WORLD CUP 2026 HUB ⚽</h1>
+  
+  <div class="autor-box">
+    PROJEKT WYKONANY PRZEZE MNIE!
+  </div>
+
+  <div class="sekcja">
+    <h3>🔥 Ciekawostki turnieju</h3>
+    <ul>
+      <li>Aż 48 drużyn w turnieju głównym!</li>
+      <li>Trzej gospodarze: USA, Kanada, Meksyk.</li>
+      <li>12 grup po 4 zespoły - wielkie emocje!</li>
+    </ul>
+  </div>
+
+  <div class="sekcja">
+    <h3>🎮 Symulator Meczu</h3>
+    <input type="text" id="druzyna1" placeholder="Wpisz pierwszą drużynę">
+    <input type="text" id="druzyna2" placeholder="Wpisz drugą drużynę">
+    <button onclick="symulujMecz()">LOSUJ WYNIK</button>
+    <div id="wynik">...</div>
+  </div>
+
+<script>
+  function symulujMecz() {
+    var d1 = document.getElementById('druzyna1').value || "Gospodarze";
+    var d2 = document.getElementById('druzyna2').value || "Goście";
+    var g1 = Math.floor(Math.random() * 5);
+    var g2 = Math.floor(Math.random() * 5);
+    document.getElementById('wynik').innerHTML = "🏁 " + d1 + " " + g1 + " : " + g2 + " " + d2;
+  }
+</script>
+
+</body>
+</html>
